@@ -75,18 +75,27 @@ console.log(median);
 //  `x` (coordinate) of 30, `y` of 50, `width` of 100, `height` of 50
 //Log out the rectangle object
 
+const rect = {
+  x: 30,
+  y: 50,
+  width: 100,
+  height: 50
+};
+console.log(rect);
+
 
 //Log out the x- and y- coordinates of the rectangle (its location). Your output 
 //should have the format `"X, Y"`.
-
+console.log(rect.x + ', ' + rect.y);
 
 //Set the rectangle's height to be the square root of its width. (Use the 
 //`Math.sqrt()` function).
 //Use *dot notation* to access the properties!
-
+rect.height = Math.sqrt(rect.width);
 
 //Log out the rectangle's area. Use *dot notation* to access the properties!
-
+const area = rect.width * rect.height;
+console.log(area)
 
 //Create a variable `circle` that represents a circle. This should be an object
 //with properties:
@@ -95,24 +104,47 @@ console.log(median);
 //  `radius` equal to the LAST value in the (sorted) `numbers` array.
 //Log out the circle
 
+const lastValue = sorted[sorted.length - 1];
+
+const circle = {
+  cx: 34,
+  cy: 43,
+  radius: lastValue
+};
+
+console.log(circle);
 
 //Create an array `shapes` that represents a list of shapes. The array should
 //contain the rectangle and the circle objects defined above.
 //Log out the variable. Be sure to inspect it in the developer console!
+const squar = {
+  x: 50,
+  y: 50,
+  width: 50,
+  height: 50
+};
 
-
+const shapes = [circle, rect, squar];
 //Add a new ANONYMOUS object (e.g., one passed in directly without its own
 //variable name) representing a right triangle to the `shapes` array.
 //The triangle should have a `base` of 33 and a `height` of 44.
 //Log out the updated shapes array.
 
-
+shapes.push({
+  base: 33,
+  height: 44
+});
+console.log(shapes);
 //Log out the triangle's `hypotenuse` property (don't calculate it, just log out
 //the current property value!). What do you get?
 
+console.log(shapes[3].hypotenuse); // I got undefined! 
 
 //Assign the triangle inside the `shapes` array a 'hypotenuse' property of `55`.
 //Log out the `shapes` array again.
 //Visually check: what happens if you inspect the previously logged array in the 
 //Chrome developer console?
+shapes[3].hypotenuse = 55;
+console.log(shapes);
 
+//I see the updated object values !
