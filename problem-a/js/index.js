@@ -3,54 +3,69 @@
 /** Basic Types */
 
 //Define a new variable `motto` for the value "The iSchool is my school"
-
+let motto = 'The iSchool is my school';
 
 //Log out the motto
-
+console.log(motto); 
 
 //Define a variable `mottoLength` that stores the length of the motto.
 //Use the `.length` property
 //Log out the length.
-
-
+const mottoLength = motto.length;
+console.log(mottoLength); 
 //Use the `indexOf()` String method to see if the word "cool" is in the string.
 //See http://www.w3schools.com/jsref/jsref_obj_string.asp for String methods
 //Log out a _boolean_ whether it is or not.
-
+console.log(motto.indexOf('cool') !== -1);
 
 //Use a String method to replace the word "iSchool" in the `motto` variable with
 //the words "Information School". The new value should be re-assigned to the
 //`motto` variable.
 //Log out the updated motto.
-
+motto = motto.replace('iSchool', 'Information School');
+console.log(motto); 
 
 //Calculate the ratio between the length of the updated motto and the length of 
 //the old (which you had saved in a variable!). Log out this ratio as a 
 //percentage with two decimal places of precision (e.g., `"123.45%"`).
 //You can use the `.toFixed()` Number method to specify the precision. 
 
-
+const ratio = (motto.length / mottoLength) * 100;
+console.log(ratio.toFixed(2) + '%');
 
 /** Arrays **/
 
 //Create an array `numbers` that contains these 10 numbers:
 //    1 4 1 5 9 2 6 5 3 5
 //Log out the array.
-
+const nums = [1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
+console.log(nums)
 
 //Use bracket notation to change the `4` in the array to a `4.2`.
 //Log out the updated array.
-
-
+nums[1] = 4.2;
+console.log(nums)
 //Add the number 3 to the END of the array.
 //Log out the updated array.
-
+nums.push(3)
+console.log(nums)
 
 //Find the median (middle) value of the numbers in the array.
 //Hint: sort() the array, then access the middle index of the sorted values.
 //You can use the `Math.floor()` function to round to a whole number.
 //Log out the median value.
 
+const sorted = nums.sort((a, b) => a - b);
+
+const middleIndex = Math.floor(sorted.length / 2);
+
+let median;
+if (sorted.length % 2 === 0) {
+  median = (sorted[middleIndex - 1] + sorted[middleIndex]) / 2;
+} else {
+  median = sorted[middleIndex];
+}
+console.log(median);
 
 
 /** Objects **/
