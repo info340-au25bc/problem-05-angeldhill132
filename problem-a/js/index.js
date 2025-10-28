@@ -4,7 +4,6 @@
 
 //Define a new variable `motto` for the value "The iSchool is my school"
 let motto = 'The iSchool is my school';
-
 //Log out the motto
 console.log(motto); 
 
@@ -38,17 +37,17 @@ console.log(ratio.toFixed(2) + '%');
 //Create an array `numbers` that contains these 10 numbers:
 //    1 4 1 5 9 2 6 5 3 5
 //Log out the array.
-const nums = [1, 4, 1, 5, 9, 2, 6, 5, 3, 5]
-console.log(nums)
+const nums = [1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
+console.log(nums);
 
 //Use bracket notation to change the `4` in the array to a `4.2`.
 //Log out the updated array.
 nums[1] = 4.2;
-console.log(nums)
+console.log(nums);
 //Add the number 3 to the END of the array.
 //Log out the updated array.
-nums.push(3)
-console.log(nums)
+nums.push(3);
+console.log(nums);
 
 //Find the median (middle) value of the numbers in the array.
 //Hint: sort() the array, then access the middle index of the sorted values.
@@ -95,7 +94,7 @@ rect.height = Math.sqrt(rect.width);
 
 //Log out the rectangle's area. Use *dot notation* to access the properties!
 const area = rect.width * rect.height;
-console.log(area)
+console.log(area);
 
 //Create a variable `circle` that represents a circle. This should be an object
 //with properties:
@@ -117,14 +116,10 @@ console.log(circle);
 //Create an array `shapes` that represents a list of shapes. The array should
 //contain the rectangle and the circle objects defined above.
 //Log out the variable. Be sure to inspect it in the developer console!
-const squar = {
-  x: 50,
-  y: 50,
-  width: 50,
-  height: 50
-};
 
-const shapes = [circle, rect, squar];
+const shapes = [rect, circle];
+console.log(shapes);
+
 //Add a new ANONYMOUS object (e.g., one passed in directly without its own
 //variable name) representing a right triangle to the `shapes` array.
 //The triangle should have a `base` of 33 and a `height` of 44.
@@ -138,13 +133,14 @@ console.log(shapes);
 //Log out the triangle's `hypotenuse` property (don't calculate it, just log out
 //the current property value!). What do you get?
 
-console.log(shapes[3].hypotenuse); // I got undefined! 
+console.log(shapes[2].hypotenuse);
+ // I got undefined! 
 
 //Assign the triangle inside the `shapes` array a 'hypotenuse' property of `55`.
 //Log out the `shapes` array again.
 //Visually check: what happens if you inspect the previously logged array in the 
 //Chrome developer console?
-shapes[3].hypotenuse = 55;
+shapes[2].hypotenuse = 55;
 console.log(shapes);
 
 //I see the updated object values !
